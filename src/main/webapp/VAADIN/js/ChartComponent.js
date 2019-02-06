@@ -1,12 +1,16 @@
 var mylibrary = mylibrary || {};
+// ez a chart kontextje
+var ctx = null;
+// ez a chat maga
+var myChart = null;
 
 mylibrary.ChartComponent = function (element) {
     element = document.getElementById("ChartComponentVer1");
     element.innerHTML =
         "<canvas id=\"chartComponentCanvas\" width=\"400\" height=\"400\"></canvas>";
 
-    var ctx = document.getElementById("chartComponentCanvas").getContext('2d');
-    var myChart = new Chart(ctx, {
+    ctx = document.getElementById("chartComponentCanvas").getContext('2d');
+    myChart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
@@ -43,4 +47,5 @@ mylibrary.ChartComponent = function (element) {
         }
     });
 
+    //return element;
 };

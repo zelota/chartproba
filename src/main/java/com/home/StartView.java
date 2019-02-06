@@ -19,7 +19,7 @@ public class StartView extends VerticalLayout implements View {
                     + ", it works!"));
         });
 
-        Button buttonGo = new Button("Jump to view");
+        Button buttonGo = new Button("Jump to bar chart view");
         buttonGo.addClickListener(e -> {
             UI.getCurrent().getNavigator().navigateTo("CHARTPROBA");
         });

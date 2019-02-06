@@ -5,7 +5,7 @@ import java.io.Serializable;
 import com.vaadin.annotations.JavaScript;
 import com.vaadin.ui.AbstractJavaScriptComponent;
 
-@JavaScript({"vaadin://js/ChartComponent.js","vaadin://js/ChartComponentConnector.js"})
+@JavaScript({"vaadin://js/ChartComponent.js", "vaadin://js/ChartComponentConnector.js"})
 public class ChartComponent extends AbstractJavaScriptComponent implements Serializable, ChartComponentServerRpc, ChartComponentClientRpc {
     private static final long serialVersionUID = 2019020215072341L;
 
@@ -19,7 +19,14 @@ public class ChartComponent extends AbstractJavaScriptComponent implements Seria
     }
 
     @Override
-    public void changeData( String[] data ) {
-        getState().data = data;
+    public void changeConfig( String configData ) {
+        getState().target = ChartComponentState.TARGET_CONFIG;
+        getState().data = configData;
+    }
+
+    @Override
+    public void changeData( String newData ) {
+        getState().target = ChartComponentState.TARGET_DATA;
+        getState().data = newData;
     }
 }

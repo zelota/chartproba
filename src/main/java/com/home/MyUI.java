@@ -33,7 +33,7 @@ public class MyUI extends UI {
         final VerticalLayout layout = new VerticalLayout();
         setContent(layout);
 
-        navigator.addView("CHARTPROBA", new ChartView());
+        navigator.addView("CHARTPROBA", new BarChartView());
         navigator.addView("", new StartView());
     }
 
