@@ -5,6 +5,11 @@ import java.io.Serializable;
 import com.vaadin.annotations.JavaScript;
 import com.vaadin.ui.AbstractJavaScriptComponent;
 
+/**
+ * ChartJS Bar komponens.
+ *
+ * @author Varsányi Péter
+ */
 @JavaScript({"vaadin://js/ChartComponent.js", "vaadin://js/ChartComponentConnector.js"})
 public class ChartComponent extends AbstractJavaScriptComponent implements Serializable, ChartComponentServerRpc, ChartComponentClientRpc {
     private static final long serialVersionUID = 2019020215072341L;

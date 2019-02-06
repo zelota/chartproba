@@ -1,3 +1,9 @@
+/**
+ * Alap, default Chart.JS bar grafikon komponens.
+ * A <code>myChart</code>-al lehet hivatkozni a chart-ra.
+ *
+ * @type {{}}
+ */
 var mylibrary = mylibrary || {};
 // ez a chart kontextje
 var ctx = null;

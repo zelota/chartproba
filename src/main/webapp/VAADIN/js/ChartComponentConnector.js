@@ -1,3 +1,9 @@
+/**
+ * Chart.JS komponens konnektor.
+ * Ezzel lehet vezérelni a szerver oldalról a komponenst.
+ * A szerver oldalra nem küld semmit.
+ *
+ */
 window.com_home_chartcomponent_ChartComponent = function () {
     gbl_tableRpcProxy = this.getRpcProxy();
 
